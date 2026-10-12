@@ -516,7 +516,9 @@ iframe {
 .slide {
   position: absolute;
   inset: 0;
-  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: grid;
   place-items: center;
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   font-weight: 800;
@@ -528,7 +530,8 @@ iframe {
 }
 
 .slide.active {
-  display: grid;
+  opacity: 1;
+  z-index: 1;
 }
 
 .slide:nth-child(2) {
